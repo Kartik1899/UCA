@@ -38,6 +38,7 @@ def solve_nqueen(size):
 		print("no solution")
 		return False
 
+#This is a nice piece of code
 
 
 
