@@ -11,11 +11,7 @@ def valid_move(chess, col, row):
 			#Bottom Bishop Move
 			return False
 		c += 1
-
 	return True	
-
-
-
 
 def solve(chess,col,size):
 	if col == size:
@@ -38,10 +34,6 @@ def solve_nqueen(size):
 		print("no solution")
 		return False
 
-
-
-
-
 if __name__ == '__main__':
 
 	assert solve_nqueen(3) == False
@@ -49,5 +41,5 @@ if __name__ == '__main__':
 	chess = [None]*4
 	solve(chess,0,4)
 	assert chess == [1,3,0,2]
-	size = int(input("Please enter the size of the chess baord"))
+	size = int(input("Please enter the size of the chess board : "))
 	solve_nqueen(size)
