@@ -1,6 +1,6 @@
 #include<iostream>
 
-// Rotating a sqaure matrix 90
+// Rotating a sqaure matrix 90 degree
 
 using namespace std;
 
@@ -19,9 +19,7 @@ void rotateArray(int **arr, int size)
         {
             if( j > i)
             {
-                int temp = arr[i][j];
-                arr[i][j] = arr[j][i];
-                arr[j][i] = temp;
+                swap(arr[i][j],arr[j][i]);
             }
         }
     }
