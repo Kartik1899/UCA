@@ -7,26 +7,23 @@ using namespace std;
 
 void rotateArray(int **arr, int size)                               //rotate function
 {
+    for(int i = 0 ; i < size / 2 ; i++)
+    {
+        for(int j = i ; j < size - 1 - i; j++)
+        {
+            int temp = arr[ i ][ j ];
+            
+            arr[ i ][ j ] = arr[ size - 1 - j][ i ];
 
-    for(int i = 0 ; i< size/2 ;i++)
-	{
+            arr[ size - 1 - j ][ i ] = arr[ size - 1 - i ][ size - 1 - j ];
 
-		for(int j = i ; j < size-1-i; j++)
-		{
-			int temp = arr[ i ][ j ];
+            arr[ size - 1 - i ][ size - 1 - j ] = arr[ j ][ size-1-i ];
 
-			arr[ i ][ j ] = arr[ size-1-j ][ i ];
-			
-            arr[ size-1-j ][ i ] = arr[ size-1-i ][ size-1-j ];
-			
-            arr[ size-1-i ][ size-1-j ] = arr[ j ][ size-1-i ];
-			
-            arr[ j ][ size-1-i ] = temp;	
-		}
+            arr[ j ][ size-1-i ] = temp;
 
-	}
+        }
+    }
 }
-
 int main()
 {
     int size;
