@@ -26,7 +26,7 @@ int findSqaureRoot(int num)
     int mid;
     int floorValue;
 
-    while( left <= right )                  // using Binary technique to find sqrt
+    while( left < right )                  // using Binary technique to find sqrt
     {
         mid = (left + right) / 2;
 
@@ -37,13 +37,13 @@ int findSqaureRoot(int num)
 
         else if( mid * mid > num)
         {
-            right--;
+            right = mid;
         }
 
         else                                // if number is not perfect sqrt then we will return the floor value , i.e, smaller nearest perfect sqrt
         {
             floorValue = mid;               
-            left++;
+            left = mid + 1;
         }
     }
 
